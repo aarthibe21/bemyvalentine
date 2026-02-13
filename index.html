@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Aarthi ❤️ Valentine</title>
+<title>Your Wife ❤️ Gundu</title>
 
 <style>
 body{
@@ -11,43 +11,92 @@ font-family:Arial;
 background:linear-gradient(135deg,#ff758c,#ff7eb3);
 text-align:center;
 color:white;
+overflow-x:hidden;
 }
-.container{
-margin-top:80px;
+
+h1{
+margin-top:40px;
+font-size:32px;
 }
-img{
-width:250px;
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:30px;
+}
+
+.gallery img{
+width:260px;
+margin:10px;
 border-radius:20px;
-margin:15px;
+box-shadow:0 10px 20px rgba(0,0,0,0.3);
+transition:0.4s;
 }
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
 button{
+margin-top:30px;
 padding:15px 25px;
-background:white;
+font-size:20px;
 border:none;
-border-radius:12px;
-font-size:18px;
+border-radius:15px;
+background:white;
 color:#ff4b7d;
+cursor:pointer;
+}
+
+.heart{
+position:fixed;
+top:-10px;
+color:white;
+animation:fall 5s linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-10px);}
+100%{transform:translateY(110vh);}
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<h1>Your Wife ❤️ Gundu</h1>
+<p>You are my forever love 💖</p>
 
-<h1>Aarthi ❤️ My Valentine</h1>
-<p>You are my forever person 💕</p>
+<div class="gallery">
 
-<img src="https://picsum.photos/300/300">
-<img src="https://picsum.photos/301/300">
-
-<br><br>
-
-<button onclick="alert('YES FOREVER ❤️')">
-Be My Valentine 💖
-</button>
+<img src="https://i.postimg.cc/9fVtK3xT/photo1.jpg">
+<img src="https://i.postimg.cc/BQ5mTz7b/photo2.jpg">
+<img src="https://i.postimg.cc/zXzQ3pWZ/photo3.jpg">
+<img src="https://i.postimg.cc/Jh9J3VqC/photo4.jpg">
+<img src="https://i.postimg.cc/kXwTgq8Y/photo5.jpg">
+<img src="https://i.postimg.cc/VvJd6zP9/photo6.jpg">
 
 </div>
+
+<button onclick="yesLove()">Be My Valentine 💕</button>
+
+<script>
+function yesLove(){
+alert("Forever yours ❤️ Gundu");
+}
+
+setInterval(()=>{
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(10+Math.random()*20)+"px";
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),5000);
+},300);
+</script>
 
 </body>
 </html>
